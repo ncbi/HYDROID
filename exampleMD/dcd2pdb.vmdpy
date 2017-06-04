@@ -1,0 +1,48 @@
+#The script is intended to be run with VMD software compiled with support of python
+#vmd -python -e script_name.vmdpy
+#50 MD snapshots are provided spaced 1 ns apart.
+
+#Extracted files https://dl.dropboxusercontent.com/u/201202/temp.tar.gz
+
+#The system under study is the same as in example 1.
+
+from VMD import *
+from Molecule import *
+from atomsel import *
+from animate import *
+
+
+import sys
+
+sys.path.insert(0,'../..')
+sys.path.insert(0,'../venv/lib/python2.7/site-packages')
+
+import os
+
+out_path="temp"
+try:
+	os.mkdir(out_path)
+except:
+	pass
+
+
+mol=Molecule()
+
+mol.load("data/scCSE4_601TA_nucl_H.psf")
+mol.load("data/scCSE4_601TA_nucl_H.dcd",first=0,step=1,last=50)
+
+nf=mol.numFrames()
+
+print("%d frames loaded\n"%nf)
+
+SEL=atomsel("nucleic or protein",molid=0)
+#This returns the correct chain ID, since in NAMD chain IDs are converted to segname
+SEL.set('chain',[i[2:] for i in SEL.get('segname')])
+SEL.set('element',[i[0] for i in SEL.get('name')])
+
+
+for i in range(0,nf):
+	goto(i)
+	print "Frame",i
+	SEL.write('pdb',"temp/%d.pdb"%i)
+exit()
