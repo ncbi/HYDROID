@@ -1,0 +1,46 @@
+#Example 2: Lane profile configuration file for profiles stored in lane_profiles.xls as extracted by ImageJ from gel electrophoresis image file.
+#Note: most of these parameters should be set in an interactive manner using assign_peak_interactive function.
+#
+#column - name of column with an array of profile values in lane_profile.xls
+#lanme - arbitrary name of the gel lane (e.g. experiment label).
+#leftlim, rightlim - indexes of values in profile array that specify the datarange that will be analyzed, in NaN dataset is not truncated
+#peakthresh - parameter for automatic peak identification algorithm, use lower values to identify more subtle peaks. However, this may lead to false positives.
+#min_dist_left - minimal distance between the individual peaks allowed at the left side of the data range.
+#min_dist_right - minimal distance between the individual peaks allowed at the right side of the data range.
+#segments - number of segment the data range is split into for linear interpolation of the min_dist value for the automatic peak identification algorithm.
+#base - try to substract linear baseline from the profile before peak identification attempt.
+#interpolate - try to guess the location of unidentified peaks from the local average spacing betwee the nearby peaks.
+#alignpos - the index of position in the profile array used to align all the profiles if they are to be plotted simultaneously (i.e. to overlay Maxam-Gilbert profiles with OH-radical profiles), end - means use the last datapoint in the profile.
+#seqpeak - approximate position of the peak that corresponds to a particular postion on DNA sequence specified by seqpos
+#seqpos - position on DNA sequence that is attributed to a particular peak identified by seqpeak value.
+#addpeaks - a list of peak positions to add manually to those identified automatically by the algorithm, format - values separated by spaces.
+#delpeaks - a list of peak positions to be deleted manually to those identified automatically by the algorithm, format - values separaed by spaces.
+## if any of the parameter values may be omitted or set to NaN, default gess values will be used.
+##If multiple lines with the same lname are present the last one will be read.
+column,	lname,				leftlim,	rightlim,	peakthresh,	min_dist_left,	min_dist_right,	segments,	base,	interpolate,	alignpos,	seqpeak,	seqpos,	addpeaks,	delpeaks
+Y0,		ddA_601_BS,		NaN,   		NaN, 		NaN, 		NaN,			NaN,			NaN,		NaN,	NaN,			end,		NaN,		NaN,	,			
+Y1,		ddG_601_BS,		NaN,   		NaN, 		NaN, 		NaN,			NaN,			NaN,		NaN,	NaN,			NaN,		NaN,		NaN,	,			
+Y2,		gg_601_BS_a,		61,   		2172, 		0.031, 		5.164,			30.225,			4,			True,	True,			2173,		1590,		130G,	, 
+Y3,		gg_601_BS_b,		NaN,   		NaN, 		NaN, 		NaN,			NaN,			NaN,		NaN,	NaN,			end,		NaN,		NaN,	,			
+Y4,		gg_601_TS_a,		NaN,   		NaN, 		NaN, 		NaN,			NaN,			NaN,		NaN,	NaN,			end,		NaN,		NaN,	,			
+Y5,		gg_601_TS_b,		60,   		2142, 		0.020, 		5.676,			32.138,			4,			True,	True,			2188,		1200,		119G,	,		
+Y6,		ddG_601_TS,		60,   		2142, 		0.020, 		5.676,			32.138,			4,			True,	True,			2188,		1200,		119G,	,		
+Y7,		ddT_601_TS,		60,   		2142, 		0.020, 		5.676,			32.138,			4,			True,	True,			2188,		1200,		119G,	,		
+#Saved updated values for ddG_601_BS from interactive window on 11, Apr 2017, 17:07:36
+Y1,ddG_601_BS,0.0,2540.0,0.01,25.0,35.6363636364,2.0,False,False,2540.0,2540.0,NaN,,
+#Saved updated values for ddG_601_TS from interactive window on 11, Apr 2017, 18:39:39
+Y6,ddG_601_TS,60.0,2650.0,0.02,29.2121212121,76.3636363636,4.0,True,False,2650.0,1200.0,119G,,
+#Saved updated values for ddT_601_TS from interactive window on 11, Apr 2017, 18:39:59
+Y7,ddT_601_TS,0.0,2656.0,0.02,23.1515151515,62.4242424242,4.0,True,False,2656.0,1200.0,119G,,
+#Saved updated values for ddA_601_BS from interactive window on 11, Apr 2017, 19:26:12
+Y0,ddA_601_BS,0.0,2537.0,0.01,27.8787878788,38.1818181818,2.0,False,False,2544.0,2537.0,NaN,,
+#Saved updated values for gg_601_TS_a from interactive window on 12, Apr 2017, 18:14:19
+Y4,gg_601_TS_a,74.0,2588.0,0.0255681818182,23.1534090909,42.6136363636,4.0,False,False,2633.0,2164.0,59A,190,
+#Saved updated values for gg_601_TS_b from interactive window on 12, Apr 2017, 18:14:28
+Y5,gg_601_TS_b,26.0,2586.0,0.02,20.1212121212,46.303030303,4.0,True,False,2643.0,2167.0,59A,,
+#Saved updated values for gg_601_BS_a from interactive window on 12, Apr 2017, 18:15:04
+Y2,gg_601_BS_a,176.0,2539.0,0.0406060606061,28.8352272727,41.1931818182,4.0,False,False,2539.0,1755.0,45T,,
+#Saved updated values for gg_601_BS_b from interactive window on 12, Apr 2017, 18:15:17
+Y3,gg_601_BS_b,28.0,2497.0,0.01,25.6198347107,37.2873116189,2.0,False,True,2544.0,1752.0,45T,,
+#Saved updated values for gg_601_BS_b from interactive window on 12, Apr 2017, 19:38:15
+Y3,gg_601_BS_b,28.0,2497.0,0.01,25.6198347107,47.3011363636,2.0,False,True,2544.0,1752.0,45T,,

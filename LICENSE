@@ -47,11 +47,16 @@ Authors:  See http://mackerell.umaryland.edu/charmm_ff.shtml for details
 License:  See http://mackerell.umaryland.edu/charmm_ff.shtml for details
 
 Location: example1/data/gel.png
-Type:     Image of PAGE gel for hydroxyl-radical footprinting experiment nucleosome reconsituted on 601TA sequence,
-          Supplementray Figure 7 from Shaytan el al. (publication in preparation)
+Type:     Image of PAGE gel of hydroxyl-radical footprinting experiment for nucleosome reconsituted on 601TA sequence,
+          Supplementray Figure 7 from Shaytan el al., Nucleic Acids Research (2017),
+          "Hydroxyl-radical footprinting combined with molecular modeling identifies unique features of DNA conformation and nucleosome positioning"
 Authors:  A.K. Shaytan, H. Xiao, G.A. Armeev, C. Wu, D. Landsman, A.R. Panchenko
 License:  Creative Commons (CC-BY)
 
+Location: example2/data/gel.png, example2/data/gg_601.ijw/-2.tif
+Type:     Images of PAGE gel of hydroxyl-radical footprinting experiments for nucleosome reconsituted on 601 sequence,
+Authors:  D.A. Gaykalova, V.M. Studitsky
+License:  Creative Commons (CC-BY)
 
 ==============================================================
 Copyright F.A.Q.

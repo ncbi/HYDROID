@@ -20,7 +20,7 @@ Document [H-SASA_params.md](H-SASA_params.md) further outlines details of theore
 ###Step-by-step example:
 - Step 1: Prepare PDB file with hydrogen atoms - see instructions in [pred_s1_prep_pdb.md](pred_s1_prep_pdb.md).
 - Step 2: Estimate theoretical hydroxyl-footprinting cleavage profiles through calculating H-SASA profile - run [pred_s2_calc_H-SASA.py](pred_s2_calc_H-SASA.py)
-- Step 3: Plot H-SASA profiles - run [pred_s3_plot_H-SASA.py](pred_s3_plot_H-SASA.py), resulting plots [here](results/scCSE4_601TA_TS_H-sasa.png) and [here](results/scCSE4_601TA_TS_H-sasa_MD.png). Plot [mock-up gel images](xxx) from theoretical profiles.
+- Step 3: Plot H-SASA profiles - run [pred_s3_plot_H-SASA.py](pred_s3_plot_H-SASA.py), resulting plots [here](results/scCSE4_601TA_TS_H-sasa.png) and [here](results/scCSE4_601TA_TS_H-sasa_MD.png). Plot [simulated gel lane profiles](results/scCSE4_601TA_TS_H-sasa_simulated.png) from theoretical profiles.
 
 ## Compare profiles
 - Experimental vs H-SASA: run [comp_plot_exp_vs_pred.py](comp_plot_exp_vs_pred.py), get comparative plots for [top](results/exp_vs_H-SASA_TS.png) and [bottom](results/exp_vs_H-SASA_BS.png) strands.

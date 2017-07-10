@@ -14,6 +14,7 @@ This package has two python libraries implementing complementary functionalities
 ## Documentation
 Several step-by-step examples serve as a manual to the package.
 * [Example 1](example1): Quantifying HRF of a centromeric nucleosome with DNA radioactively labeled at 3' end. Predicting cleavage frequency profiles from an atomistic structure model and comparing to experimental ones.
+* [Example 2](example2): Quantifying HRF of a nucleosome with DNA radioactively labeled at 5' end. Highlights conversion of gel images to data profiles via ImageJ.
 
 DocString documentation for every function is provided inside the libraries and step-by-step example python files.
 
