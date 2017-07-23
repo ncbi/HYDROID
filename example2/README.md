@@ -6,6 +6,8 @@ This is a generic example that outlines HRF data quantification from a gel image
 
 Python files implementing every step are provided in this directory.
 
+Video tutorial outlining the key steps is available [here](https://www.youtube.com/playlist?list=PL_GHGdsPyn0nVSvrRnyvuvkRCrNBjqeuC).
+
 ## Quantification of HRF gel electrophoresis images using [HYDROIDexp.py](../HYDROIDexp.py).
 ### Step-by-step usage example:
 - Step 1: Extract lane profiles from gel images via ImageJ - see instructions in [exp_s1_extract_lp.md](exp_s1_extract_lp.md).

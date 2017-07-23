@@ -7,6 +7,7 @@ Python files implementing every step are provided in this directory.
 
 Document [H-SASA_params.md](H-SASA_params.md) further outlines details of theoretical cleavage profiles calculation and their dependence on various parameters.
 
+Video tutorial outlining the key steps is available [here](https://www.youtube.com/playlist?list=PL_GHGdsPyn0nVSvrRnyvuvkRCrNBjqeuC).
 
 ## Quantification of HRF gel electrophoresis images using [HYDROIDexp.py](../HYDROIDexp.py).
 ### Step-by-step usage example:

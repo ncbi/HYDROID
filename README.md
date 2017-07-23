@@ -16,6 +16,8 @@ Several step-by-step examples serve as a manual to the package.
 * [Example 1](example1): Quantifying HRF of a centromeric nucleosome with DNA radioactively labeled at 3' end. Predicting cleavage frequency profiles from an atomistic structure model and comparing to experimental ones.
 * [Example 2](example2): Quantifying HRF of a nucleosome with DNA radioactively labeled at 5' end. Highlights conversion of gel images to data profiles via ImageJ.
 
+Video tutorial is available [here](https://www.youtube.com/playlist?list=PL_GHGdsPyn0nVSvrRnyvuvkRCrNBjqeuC).
+
 DocString documentation for every function is provided inside the libraries and step-by-step example python files.
 
 Detailed information about HYDROID algorithms can be found in the accompanying publication: A.K. Shaytan et al. (in preparation)
