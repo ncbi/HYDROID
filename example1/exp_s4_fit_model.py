@@ -44,6 +44,6 @@ lane_data=[
 ###################################
 for s in lane_data:
 	fit_peaks(lane_profile_file,lane_config_file,DNAseq=s['seq'],labeled_end=s['label'],lane_name=s['lane_name'],out_path=out_path,\
-		peaktype='Gaussian',fitting_constraint='dSIGMA>=0',maxfev=50000,graphshow=False,plotcontrib=True,\
+		peaktype='Gaussian',fitting_constraint='dSIGMA>=0',maxfev=50000,graphshow=True,plotcontrib=True,\
 		csvfileout=s['lane_name']+'_fitted_intensities.csv',pngfileout=s['lane_name']+'_fitted_intensities.png',\
 		csvfilein=None)#s['lane_name']+'_fitted_intensities.csv')
