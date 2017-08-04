@@ -57,7 +57,7 @@ for i in range(0,nf):
 	SEL.write('pdb',temppdb.name)
 	temppdb.seek(0)
 	get_DNA_H_SASA(temppdb.name,tempout,\
-		chain=['I','J'],resids=[range(-71,72),range(-71,72)],seq=[TS_seq,BS_seq],probe_size=1.4,slicen=200,vdw_set='charmm36-rmin',\
+		chain=['I','J'],resids=[range(-71,72),range(-71,72)],seq=[TS_seq,BS_seq],probe_radius=1.4,slicen=200,vdw_set='charmm36-rmin',\
 		Hcontrib=[[1.0]*7,[1.0]*7],n_threads=6,verbose=True)
 	tempout.seek(0)
 	df=pd.read_csv(tempout,comment='#')
