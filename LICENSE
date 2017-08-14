@@ -51,7 +51,7 @@ Type:     Functions needed to simulate the gel lane profile and image of DNA gel
           electrophoresis experiments based on known band intensities and DNA
           molecular weight
 Authors:  G.A. Armeev (Moscow State University)
-License:  Creative Commons (CC-BY)
+License:  Public domain
 
 Location: example1/data/gel.png
 Type:     Image of PAGE gel of hydroxyl-radical footprinting experiment for nucleosome reconsituted on 601TA sequence,
