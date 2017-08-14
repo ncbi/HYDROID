@@ -13,6 +13,7 @@ import time
 import tempfile
 import os
 import pkgutil
+import collections
 
 import numpy as np
 import pandas as pd
@@ -26,6 +27,8 @@ from matplotlib.widgets import Slider, Button, CheckButtons, RadioButtons
 
 from scipy.optimize import minimize 
 from scipy.optimize import leastsq # Levenberg-Marquadt Algorithm #
+from scipy.ndimage.filters import gaussian_filter as gfilt
+
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -1238,9 +1241,113 @@ def plot_prof_on_seq(data_file,DNAseq,prof_names=None,\
 		plt.savefig(os.path.splitext(pngfileout)[0]+'.png',dpi=(300))
 	if(graphshow):
 		plt.show()
-	plt.close()
+	plt.close(fig)
 	temp.close()
 	temp2.close()
+
+
+### Functions for plotting theoretical gels and estimated data
+def ogston_pos(M,options={'Mu_0':3193.01,'D_0':350.64,'B':0.00,'C':0.14}):
+    """
+    This function implements calculations of DNA mobility (traveled distance) 
+    in gel electrophoresis based on Ogston mobility model.
+    ln(Mu) ~ -M, where Mu is mobility and M is molecular weight.
+    
+    This function returns positions of peaks on the gel lane based on their 
+    molecular weight, expressed as a number of nucleotides.
+    M - a numpy array with weights (by default molecular weight is measured in 
+    the number of nucleotides)
+    The formula to calculate the mobility is as follows
+        Mu = Mu_0*exp(-(B+C*M^0.5)^2)-D_0
+    options - dict with parameters.
+        Default paramerters {'Mu_0':3193.01,'D_0':350.64,'B':0.00,'C':0.14}
+        are derived from a sample experimental dataset. 
+               	
+    """
+    return options['Mu_0']*np.exp(-(options['B']+options['C']*M**0.5)**2)-options['D_0']
+
+def make_lane(positions,CleavageInt,V_sigmas,H_sigma,width,ident=None):
+    """
+    This is a helper function that simulates a gel lane image in the form of 2D
+    numpy array based on band positions, widths and intensities (Gaussian approximation is used)
+    positions - peak positions in pixel units
+    CleavageInt - peak intensities 
+    V_sigmas - sigmas for vertical core of gaussian filter for each peak (as they tend to grow)
+    !positions,CleavageInt,V_sigmas  must have same size!
+    H_sigma - sigma for horisontal core of gaussian filter 
+    width - width of the resulting lane
+    ident - identation from the last peak in pixels
+    """
+    if ident==None:
+        ident=V_sigmas.max()*2
+    H_sigma  =int(H_sigma)
+    ident=int(ident)
+    lane=np.zeros((int(positions.max()+ident*2),int(width)))
+    for pos,intencity,sigma in zip(positions,CleavageInt,V_sigmas):
+        temp=np.zeros((int(positions.max()+ident*2),int(width)))
+        temp[int(pos),H_sigma:-H_sigma]=intencity #np.repeat(intencity,width)
+        lane+=gfilt(temp,(sigma,H_sigma))
+
+    return lane
+
+
+def simulate_gel(intensities, offset, model='ogston',
+				graphshow=False,pngfileout=None,title='',
+                options={'Mu_0':3193.01,'D_0':350.64,'B':0.00,'C':0.14},
+                Dc=0.00581843,
+                v_blur={'A':-0.05, 'B':0.3, 'C':3.81},
+                H_sigma=5,width=55):
+        '''
+        This function simulates the gel lane profile and image of DNA gel
+        electrophoresis experiments based on known band intensities and DNA
+        molecular weight.
+        intensities - list of gel band intensities (DNA cleavage frequencies)
+                ordered by increasing distance from the labeled end.
+        offset  - distance from the DNA labeled end to the first datapoint
+                in the list of intensities
+        model   - model of DNA mobility in gel electrophoresis.
+         'linear' - peak run distance depends from nucleotide number as B*(Nmax-Ni) + C
+         'ogston' - peak run distance depends from nucleotide number as 
+                Mu_0*exp(-(B+C*M^0.5)^2)-D_0
+        options - dict for model parameters 
+                example options={'Mu_0':3193.01,'D_0':350.64,'B':0.00,'C':0.14}
+        Dc - dispersion coeffiscient constant, which relates movility and band 
+            D = Dc * Mu  
+        H_sigma - horisontal blur strength in pixels
+        width   - lane width
+        '''
+        lengths_in_bases=np.arange(offset,offset+intensities.size)
+        if model == 'ogston':
+            runs=ogston_pos(lengths_in_bases,options)
+        elif model == 'linear':
+            runs = options['C'] + options['B']*(lengths_in_bases.max()- lengths_in_bases)
+        
+        V_sigmas=Dc*(runs+options['D_0'])
+               
+        basic_lane=make_lane(runs[runs>0],
+                     intensities[runs>0],
+                     V_sigmas[runs>0],
+                     H_sigma=H_sigma,width=width)
+
+        plt.rcParams["figure.figsize"] =[12,3]
+        figGel, ax = plt.subplots(nrows=2)
+        
+        ax[0].imshow(basic_lane.T,cmap='Greys')
+        
+        ax[1].plot(basic_lane[:,50],label='Simulated lane')
+        ax[1].set_ylabel('Intensity')
+        ax[1].set_xlabel('Travel distance, px')
+        ax[1].set_xlim(ax[0].get_xlim())
+        
+        margins = dict(hspace=0.2, wspace=0.2, top=1, bottom=0.17, left=0.06, right=0.94)
+        figGel.subplots_adjust(**margins) 
+        ax[0].set_title('%s simulated gel image' % title)
+        ax[1].set_title('Lane intensity profile')       
+        if pngfileout != None:
+	        plt.savefig(pngfileout,dpi=300)
+        if (graphshow):
+            plt.show()
+        plt.close(figGel)
 
 
 ###Functions under development

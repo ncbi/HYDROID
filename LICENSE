@@ -46,6 +46,13 @@ Type:     Atomic radii derived from CHARMM36 force field parameters
 Authors:  See http://mackerell.umaryland.edu/charmm_ff.shtml for details
 License:  See http://mackerell.umaryland.edu/charmm_ff.shtml for details
 
+Location: functions in HYDROIDexp.py :ogston_pos, make_lane, simulate_gel
+Type:     Functions needed to simulate the gel lane profile and image of DNA gel
+          electrophoresis experiments based on known band intensities and DNA
+          molecular weight
+Authors:  G.A. Armeev (Moscow State University)
+License:  Public domain
+
 Location: example1/data/gel.png
 Type:     Image of PAGE gel of hydroxyl-radical footprinting experiment for nucleosome reconsituted on 601TA sequence,
           Supplementray Figure 7 from Shaytan el al., Nucleic Acids Research (2017),
