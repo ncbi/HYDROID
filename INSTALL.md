@@ -8,11 +8,12 @@ Below we provide several examples for different operating systems that can get y
 ## On Ubuntu Linux (v16.04) with native Python
 
 ~~~~
-#prepare package manager
+#prepare package manager and core packages
 sudo apt-get install software-properties-common
 sudo apt-add-repository universe
 sudo apt-get update
-sudo apt-get install python-pip
+sudo apt-get -y install python-pip
+sudo apt-get -y install python-tk
 
 #download HYDROID
 wget https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
@@ -47,23 +48,19 @@ python exp_s2_assign_peaks.py
 ## On Ubuntu Linux (v16.04) with Continuum Anaconda Python
 
 First, install Anaconda with Python2.7 from [https://www.continuum.io](https://www.continuum.io)
+Do not forget to add Anaconda to your PATH.
 ~~~~
-#prepare package manager
-sudo apt-get install software-properties-common
-sudo apt-add-repository universe
-sudo apt-get update
-sudo apt-get install python-pip
-
 #download HYDROID
 wget https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
 tar -zxf v0.0.1.tar.gz
 mv HYDROID-0.0.1 HYDROID
 cd HYDROID
 
+#Construct environments
 conda create --name hydroid
 source activate hydroid
 conda install pip
-conda install vritualenv
+conda install virtualenv
 virtualenv venv
 source deactivate
 source venv/bin/activate
