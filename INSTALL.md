@@ -88,7 +88,7 @@ python exp_s2_assign_peaks.py
 ## On MacOS with native Python:
 ~~~~
 #download HYDROID
-wget https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
+wget --no-check-certificate https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
 tar -zxf v0.0.1.tar.gz
 mv HYDROID-0.0.1 HYDROID
 cd HYDROID
@@ -104,7 +104,7 @@ pip install -r requirements.txt
 
 #Install FREESASA (optional, only for HYDROIDpred)
 pip install Cython
-wget https://github.com/mittinatten/freesasa/releases/download/2.0.1/freesasa-2.0.1.tar.gz
+wget --no-check-certificate https://github.com/mittinatten/freesasa/releases/download/2.0.1/freesasa-2.0.1.tar.gz
 mkdir freesasa
 tar -zxf freesasa-2.0.1.tar.gz -C freesasa --strip-components=1
 cd freesasa
@@ -121,20 +121,21 @@ cd example1
 python exp_s2_assign_peaks.py
 ~~~~
 
-## On MacOS with with Continuum Anaconda Python
+## On MacOS with with Continuum Anaconda Python (In Development)
 
 First, install Anaconda with Python2.7 from [https://www.continuum.io](https://www.continuum.io)
 ~~~~
 #download HYDROID
-wget https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
+wget --no-check-certificate https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
 tar -zxf v0.0.1.tar.gz
 mv HYDROID-0.0.1 HYDROID
 cd HYDROID
 
+#Create environments
 conda create --name hydroid
 source activate hydroid
 conda install pip
-conda install vritualenv
+conda install virtualenv
 virtualenv venv
 source deactivate
 source venv/bin/activate
@@ -145,7 +146,7 @@ pip install -r requirements.txt
 
 #Install FREESASA (optional, only for HYDROIDpred)
 pip install Cython
-wget https://github.com/mittinatten/freesasa/releases/download/2.0.1/freesasa-2.0.1.tar.gz
+wget --no-check-certificate https://github.com/mittinatten/freesasa/releases/download/2.0.1/freesasa-2.0.1.tar.gz
 mkdir freesasa
 tar -zxf freesasa-2.0.1.tar.gz -C freesasa --strip-components=1
 cd freesasa
