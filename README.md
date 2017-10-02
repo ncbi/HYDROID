@@ -26,6 +26,7 @@ Detailed information about HYDROID algorithms can be found in the accompanying p
 ## Installation
 
 Latest stable version of HYDROID can be downloaded from the [releases page](https://github.com/ncbi/HYDROID/releases).
+The name of the directory containing the contents of the package should always be `HYDROID`.
 
 ### Requirements
 - Python 2.7
@@ -34,7 +35,8 @@ Latest stable version of HYDROID can be downloaded from the [releases page](http
 
 ### Installation examples
 
-Installing Python and its modules is usually system specific. Using `virtualenv` together with `pip` or [Anaconda package manager](https://www.continuum.io) to match the exact versions of the modules is recommended.
+Installing Python and its modules is usually system specific. Using `virtualenv` together with `pip` or other python package managers to match the exact versions of the modules is recommended.
+
 [INSTALL.md](INSTALL.md) provides common installation examples for Linux, MacOS and PC.
 
 

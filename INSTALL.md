@@ -17,7 +17,8 @@ sudo apt-get install python-pip
 #download HYDROID
 wget https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
 tar -zxf v0.0.1.tar.gz
-cd HYDROID-0.0.1
+mv HYDROID-0.0.1 HYDROID
+cd HYDROID
 
 #Enable virtualenv
 pip install virtualenv
@@ -56,7 +57,8 @@ sudo apt-get install python-pip
 #download HYDROID
 wget https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
 tar -zxf v0.0.1.tar.gz
-cd HYDROID-0.0.1
+mv HYDROID-0.0.1 HYDROID
+cd HYDROID
 
 conda create --name hydroid
 source activate hydroid
@@ -91,7 +93,8 @@ python exp_s2_assign_peaks.py
 #download HYDROID
 wget https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
 tar -zxf v0.0.1.tar.gz
-cd HYDROID-0.0.1
+mv HYDROID-0.0.1 HYDROID
+cd HYDROID
 
 #Enable virtualenv
 pip install virtualenv
@@ -128,7 +131,8 @@ First, install Anaconda with Python2.7 from [https://www.continuum.io](https://w
 #download HYDROID
 wget https://github.com/ncbi/HYDROID/archive/v0.0.1.tar.gz
 tar -zxf v0.0.1.tar.gz
-cd HYDROID-0.0.1
+mv HYDROID-0.0.1 HYDROID
+cd HYDROID
 
 conda create --name hydroid
 source activate hydroid
