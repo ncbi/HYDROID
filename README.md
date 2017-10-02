@@ -23,64 +23,20 @@ DocString documentation for every function is provided inside the libraries and 
 Detailed information about HYDROID algorithms can be found in the accompanying publication: A.K. Shaytan et al. (in preparation)
 
 
-## Requirements and installation
+## Installation
 
+Latest stable version of HYDROID can be downloaded from the [releases page](https://github.com/ncbi/HYDROID/releases).
+
+### Requirements
 - Python 2.7
-- Python modules specified in [requirements.txt](requirements.txt). Using virtualenv and pip to match the exact versions of the modules is recommended.
+- Python modules specified in [requirements.txt](requirements.txt). 
+- [freesasa library](http://freesasa.github.io) v2.0.1 should be compiled with python bindings and accessible in python (only needed for HYDROIDpred).
 
-#### HYDROIDpred specific:
-- [freesasa library](http://freesasa.github.io) v2.0.1 should be compiled with python bindings and accessible in python (see installation example below, the latest compatible version is provided).
+### Installation examples
 
-#### Example installation instructions using Anaconda python:
-Install Anaconda with Python2.7 from [https://www.continuum.io](https://www.continuum.io)
-~~~~
-git clone  https://github.com/ncbi/HYDROID.git
-cd HYDROID
-conda create --name hydroid
-source activate hydroid
-conda install pip
-conda install vritualenv
-virtualenv venv
-source deactivate
-source venv/bin/activate
-pip install -r requirements.txt
-pip install Cython              #only for HYDROIDpred
-wget https://github.com/mittinatten/freesasa/releases/download/2.0.1/freesasa-2.0.1.tar.gz #only for HYDROIDpred
-mkdir freesasa                  #only for HYDROIDpred
-tar -zxf freesasa-2.0.1.tar.gz -C freesasa --strip-components=1 #only for HYDROIDpred
-cd freesasa                     #only for HYDROIDpred
-./configure --enable-python-bindings --disable-json --disable-xml CFLAGS="-fPIC -O2" --prefix=`pwd`    #only for HYDROIDpred
-make; make install              #only for HYDROIDpred
-cd ..                           #only for HYDROIDpred
-cd example1
-python exp_s2_assign_peaks.py
-...
-~~~~
+Installing Python and its modules is usually system specific. Using `virtualenv` together with `pip` or [Anaconda package manager](https://www.continuum.io) to match the exact versions of the modules is recommended.
+[INSTALL.md](INSTALL.md) provides common installation examples for Linux, MacOS and PC.
 
-
-#### Example installation instructions for MacOS with native Python (addressing matplotlib issues in virtual environment):
-~~~~
-git clone  https://github.com/ncbi/HYDROID.git
-cd HYDROID
-pip install virtualenv
-virtualenv venv
-source venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-pip install Cython              #only for HYDROIDpred
-wget https://github.com/mittinatten/freesasa/releases/download/2.0.1/freesasa-2.0.1.tar.gz #only for HYDROIDpred
-mkdir freesasa                  #only for HYDROIDpred
-tar -zxf freesasa-2.0.1.tar.gz -C freesasa --strip-components=1 #only for HYDROIDpred
-cd freesasa                     #only for HYDROIDpred
-./configure --enable-python-bindings --disable-json --disable-xml CFLAGS="-fPIC -O2" --prefix=`pwd`    #only for HYDROIDpred
-make; make install              #only for HYDROIDpred
-cd ..                           #only for HYDROIDpred
-deactivate
-export PYTHONHOME=`pwd`/venv
-cd example1
-python exp_s2_assign_peaks.py
-...
-~~~~
 
 ## Citing HYDROID
 Please cite HYDROID using following publication:
