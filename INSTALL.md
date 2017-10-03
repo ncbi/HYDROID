@@ -8,7 +8,7 @@ The most system specific requirement of HYDROID is the [matplotlib](http://matpl
 Below we provide several examples for different operating systems that can get you started. 
 
 ## On Ubuntu Linux (v16.04) with native Python
-Open terminal an execute following commands.
+Open bash terminal an execute following commands.
 ~~~~
 #prepare package manager and core packages
 sudo apt-get install software-properties-common
@@ -49,8 +49,8 @@ python exp_s2_assign_peaks.py
 
 ## On Ubuntu Linux (v16.04) with Continuum Anaconda Python
 
-First, install Anaconda with Python2.7 from [https://www.continuum.io](https://www.continuum.io)
-Do not forget to add Anaconda to your PATH. Then open terminal an execute following commands.
+First, install Miniconda with Python2.7 from [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
+Do not forget to add Miniconda to your PATH. Then open bash terminal an execute following commands.
 ~~~~
 #download HYDROID
 wget https://github.com/ncbi/HYDROID/archive/v0.0.2.tar.gz
@@ -79,14 +79,13 @@ python exp_s2_assign_peaks.py
 
 
 ## On MacOS with native Python:
-Open terminal an execute following commands.
-~~~~
-#download HYDROID
-wget --no-check-certificate https://github.com/ncbi/HYDROID/archive/v0.0.2.tar.gz
-tar -zxf v0.0.2.tar.gz
-mv HYDROID-0.0.2 HYDROID
-cd HYDROID
 
+Download HYDROID manually from https://github.com/ncbi/HYDROID/archive/v0.0.2.tar.gz
+Extract its contents and change the directory name to `HYDROID`.
+Download FREESASA manually from https://github.com/mittinatten/freesasa/releases/download/2.0.1/freesasa-2.0.1.tar.gz
+Extract and place the contents in `freesasa` directory inside `HYDROID`
+Open command line, change directory to `HYDROID` folder and execute following commands.
+~~~~
 #Enable virtualenv
 pip install virtualenv
 virtualenv venv
@@ -117,9 +116,11 @@ python exp_s2_assign_peaks.py
 
 ## On MacOS with Continuum Anaconda Python
 
-First, install Anaconda with Python2.7 from [https://www.continuum.io](https://www.continuum.io).
+First, install Miniconda with Python2.7 from [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
 Then open terminal an execute following commands.
 ~~~~
+conda install wget
+
 #download HYDROID
 wget --no-check-certificate https://github.com/ncbi/HYDROID/archive/v0.0.2.tar.gz
 tar -zxf v0.0.2.tar.gz
@@ -147,13 +148,18 @@ python exp_s2_assign_peaks.py
 
 
 ## On Windows with Continuum Anaconda Python (currently only for HYDROIDexp part):
-First, install Anaconda with Python2.7 from [https://www.continuum.io](https://www.continuum.io)
-Do not forget to add Anaconda to your PATH.
+First, install Miniconda with Python2.7 from [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
+
 Download HYDROID manually from https://github.com/ncbi/HYDROID/archive/v0.0.2.zip
 
 Unzip the contents and change the directory name to `HYDROID`.
-Open command line, chande directory to `HYDROID` folder and execute following commands.
+Open command line, change directory to `HYDROID` folder and execute following commands.
 ~~~~
+#Add Anaconda to your path, may depend on where you installed it or on Windows version
+set PATH=%PATH%;C:\Users\User-Name\AppData\Local\Continuum\Miniconda2
+set PATH=%PATH%;C:\Users\User-Name\AppData\Local\Continuum\Miniconda2\Scripts
+
+#Create environments and install packages
 conda env create -f conda_env.yml
 activate hydroid
 
