@@ -132,7 +132,7 @@ mv HYDROID-0.0.1 HYDROID
 cd HYDROID
 
 #Create environments and install packages
-conda create -f conda_env.yml
+conda env create -f conda_env.yml
 source activate hydroid
 
 #Install FREESASA (optional, only for HYDROIDpred)
