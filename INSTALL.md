@@ -1,7 +1,9 @@
 # Installation examples for HYDROID
 ## General comments
-There are many different ways of installing Python together with its modules. The most system specific requirement of HYDROID is the [matplotlib](http://matplotlib.org/users/installing.html) library and its graphical backends.
-Using package managers or Python distributions, such as, Continuum Anaconda, Enthought Canopy, WinPython usually facilitates the process.
+There are many different ways of installing Python together with its modules.
+Installing Python and its modules is usually system specific. Using `virtualenv` together with `pip` or other python package managers (Continuum Anaconda, Enthought Canopy, WinPython) to match the exact versions of the modules is recommended. We provide environment files for `pip` ([requirements.txt](requirements.txt)) and Anaconda ([conda_env.yml](conda_env.yml)).
+
+The most system specific requirement of HYDROID is the [matplotlib](http://matplotlib.org/users/installing.html) library and its graphical backends.
 
 Below we provide several examples for different operating systems that can get you started. 
 
@@ -56,18 +58,9 @@ tar -zxf v0.0.1.tar.gz
 mv HYDROID-0.0.1 HYDROID
 cd HYDROID
 
-#Construct environments
-conda create --name hydroid
+#Create environments and install packages
+conda env create -f conda_env.yml
 source activate hydroid
-conda install pip
-conda install virtualenv
-virtualenv venv
-source deactivate
-source venv/bin/activate
-
-#Install packages
-pip install --upgrade pip
-pip install -r requirements.txt
 
 #Install FREESASA (optional, only for HYDROIDpred)
 pip install Cython

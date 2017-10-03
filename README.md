@@ -35,7 +35,7 @@ The name of the directory containing the contents of the package should always b
 
 ### Installation examples
 
-Installing Python and its modules is usually system specific. Using `virtualenv` together with `pip` or other python package managers to match the exact versions of the modules is recommended.
+Installing Python and its modules is usually system specific. Using `virtualenv` together with `pip` or other python package managers to match the exact versions of the modules is recommended. We provide environment files for `pip` ([requirements.txt](requirements.txt)) and Continuum Anaconda ([conda_env.yml](conda_env.yml)).
 
 [INSTALL.md](INSTALL.md) provides common installation examples for Linux, MacOS and PC.
 
