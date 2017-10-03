@@ -18,9 +18,9 @@ sudo apt-get -y install python-pip
 sudo apt-get -y install python-tk
 
 #download HYDROID
-wget https://github.com/ncbi/HYDROID/archive/v0.0.2.tar.gz
-tar -zxf v0.0.2.tar.gz
-mv HYDROID-0.0.2 HYDROID
+wget https://github.com/ncbi/HYDROID/archive/v0.0.3.tar.gz
+tar -zxf v0.0.3.tar.gz
+mv HYDROID-0.0.3 HYDROID
 cd HYDROID
 
 #Enable virtualenv
@@ -53,9 +53,9 @@ First, install Miniconda with Python2.7 from [https://conda.io/miniconda.html](h
 Do not forget to add Miniconda to your PATH. Then open bash terminal an execute following commands.
 ~~~~
 #download HYDROID
-wget https://github.com/ncbi/HYDROID/archive/v0.0.2.tar.gz
-tar -zxf v0.0.2.tar.gz
-mv HYDROID-0.0.2 HYDROID
+wget https://github.com/ncbi/HYDROID/archive/v0.0.3.tar.gz
+tar -zxf v0.0.3.tar.gz
+mv HYDROID-0.0.3 HYDROID
 cd HYDROID
 
 #Create environments and install packages
@@ -80,7 +80,7 @@ python exp_s2_assign_peaks.py
 
 ## On MacOS with native Python:
 
-Download HYDROID manually from https://github.com/ncbi/HYDROID/archive/v0.0.2.tar.gz
+Download HYDROID manually from https://github.com/ncbi/HYDROID/archive/v0.0.3.tar.gz
 Extract its contents and change the directory name to `HYDROID`.
 Download FREESASA manually from https://github.com/mittinatten/freesasa/releases/download/2.0.1/freesasa-2.0.1.tar.gz
 Extract and place the contents in `freesasa` directory inside `HYDROID`
@@ -122,9 +122,9 @@ Then open terminal an execute following commands.
 conda install wget
 
 #download HYDROID
-wget --no-check-certificate https://github.com/ncbi/HYDROID/archive/v0.0.2.tar.gz
-tar -zxf v0.0.2.tar.gz
-mv HYDROID-0.0.2 HYDROID
+wget --no-check-certificate https://github.com/ncbi/HYDROID/archive/v0.0.3.tar.gz
+tar -zxf v0.0.3.tar.gz
+mv HYDROID-0.0.3 HYDROID
 cd HYDROID
 
 #Create environments and install packages
@@ -150,7 +150,7 @@ python exp_s2_assign_peaks.py
 ## On Windows with Continuum Anaconda Python (currently only for HYDROIDexp part):
 First, install Miniconda with Python2.7 from [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
 
-Download HYDROID manually from https://github.com/ncbi/HYDROID/archive/v0.0.2.zip
+Download HYDROID manually from https://github.com/ncbi/HYDROID/archive/v0.0.3.zip
 
 Unzip the contents and change the directory name to `HYDROID`.
 Open command line, change directory to `HYDROID` folder and execute following commands.
