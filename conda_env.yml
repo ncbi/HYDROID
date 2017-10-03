@@ -1,0 +1,15 @@
+name: hydroid
+channels:
+- conda-forge
+- defaults
+dependencies:
+- peakutils=1.1.0
+- biopython=1.68
+- matplotlib=2.0.0
+- nomkl=1.0=0
+- numpy=1.11
+- pandas=0.19.2
+- scipy=0.18.1
+- statsmodels=0.8.0
+- pillow=4.0.0
+

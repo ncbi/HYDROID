@@ -121,7 +121,7 @@ cd example1
 python exp_s2_assign_peaks.py
 ~~~~
 
-## On MacOS with with Continuum Anaconda Python (In Development)
+## On MacOS with Continuum Anaconda Python
 
 First, install Anaconda with Python2.7 from [https://www.continuum.io](https://www.continuum.io)
 ~~~~
@@ -131,18 +131,9 @@ tar -zxf v0.0.1.tar.gz
 mv HYDROID-0.0.1 HYDROID
 cd HYDROID
 
-#Create environments
-conda create --name hydroid
+#Create environments and install packages
+conda create -f conda_env.yml
 source activate hydroid
-conda install pip
-conda install virtualenv
-virtualenv venv
-source deactivate
-source venv/bin/activate
-
-#Install packages
-pip install --upgrade pip
-pip install -r requirements.txt
 
 #Install FREESASA (optional, only for HYDROIDpred)
 pip install Cython
@@ -153,10 +144,6 @@ cd freesasa
 ./configure --enable-python-bindings --disable-json --disable-xml CFLAGS="-fPIC -O2" --prefix=`pwd`
 make; make install
 cd ..
-
-#MacOS specific stuff
-deactivate
-export PYTHONHOME=`pwd`/venv
 
 #Test that it's working
 cd example1
