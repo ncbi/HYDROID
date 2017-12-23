@@ -87,6 +87,8 @@ setup(
         'console_scripts': [
             'HYDROID_test_exp=hydroid.command_line:test_exp',
             'HYDROID_test_pred=hydroid.command_line:test_pred',
+            'HYDROID_get_ex1=hydroid.command_line:HYDROID_get_ex1',
+            'HYDROID_get_ex2=hydroid.command_line:HYDROID_get_ex2',
 
         ],
     },
