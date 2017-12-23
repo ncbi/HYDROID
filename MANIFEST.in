@@ -1,0 +1,12 @@
+include AUTHORS.rst CHANGES.rst DESCRIPTION.md LICENSE
+include hydroid/pkgdata/amber10_rmin.config
+include hydroid/pkgdata/charmm36_rmin.config
+include hydroid/pkgdata/cnr.otf
+include hydroid/pkgdata/cnrb.otf
+include hydroid/pkgdata/test_data/lane_profiles.xls
+include hydroid/pkgdata/test_data/lane_config.csv
+include hydroid/pkgdata/test_data/test.pdb
+
+global-include VERSION
+recursive-exclude docs *
+recursive-exclude examples *.pyc

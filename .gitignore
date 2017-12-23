@@ -64,6 +64,8 @@ target/
 #My
 venv/
 MYSOFT/
-exampleMD/temp/
-exampleMD/temp.tar.gz
+examples/exampleMD/temp/
+examples/exampleMD/temp.tar.gz
 temp/
+.DS_Store
+hydroid.egg-info/

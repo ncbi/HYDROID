@@ -1,0 +1,69 @@
+#This is an example script that shows how to calculate average H-SASA profiles
+#from a molecular dynamics simulations trajectory
+#The script is intended to be run with VMD software compiled with support of python
+#vmd -python -e script_name.vmdpy
+#Details of simulations can be found in Shaytan et al.
+#50 MD snapshots are provided spaced 1 ns apart.
+
+#The system under study is the same as in example 1.
+
+from VMD import *
+from Molecule import *
+from atomsel import *
+from animate import *
+
+
+import os,sys,tempfile
+
+sys.path.insert(0,'../venv/lib/python2.7/site-packages')
+
+from Bio.Seq import Seq
+from hydroid.HYDROIDpred import get_DNA_H_SASA
+import pandas as pd
+import numpy as np
+
+out_path="results"
+try:
+	os.mkdir(out_path)
+except:
+	pass
+
+#Set DNA sequence
+TS_seq=Seq('GGAGATACCCGGTGCTAAGGCCGCTTAATTGGTCGTAGCAAGCTCTAGCACCGCTTAAACGCACGTACGCGCTGTCTACCGCGTTTTAACCGCCAATAGGATTACTTACTAGTCTCTAGGCACGTGTAAGATATATACATCCT')
+BS_seq=TS_seq.reverse_complement()
+
+
+mol=Molecule()
+
+mol.load("data/scCSE4_601TA_nucl_H.psf")
+mol.load("data/scCSE4_601TA_nucl_H.dcd",first=0,step=1,last=50)
+
+nf=mol.numFrames()
+
+print("%d frames loaded\n"%nf)
+
+SEL=atomsel("nucleic or protein",molid=0)
+#This returns the correct chain ID, since in NAMD chain IDs are converted to segnames
+SEL.set('chain',[i[2:] for i in SEL.get('segname')])
+
+sum_df=pd.DataFrame()
+
+for i in range(0,nf):
+	goto(i)
+	print "Frame",i
+	temppdb = tempfile.NamedTemporaryFile()
+	tempout = tempfile.NamedTemporaryFile()
+	SEL.write('pdb',temppdb.name)
+	temppdb.seek(0)
+	get_DNA_H_SASA(temppdb.name,tempout,\
+		chain=['I','J'],resids=[range(-71,72),range(-71,72)],seq=[TS_seq,BS_seq],probe_radius=1.4,slicen=200,vdw_set='charmm36-rmin',\
+		Hcontrib=[[1.0]*7,[1.0]*7],n_threads=6,verbose=True)
+	tempout.seek(0)
+	df=pd.read_csv(tempout,comment='#')
+	temppdb.close()
+	tempout.close()
+	df['Time']=i
+	sum_df=pd.concat([sum_df,df])
+gv=sum_df.groupby(['resid_0','Site_0','resid_1','Site_1']).agg(np.mean)
+gv.to_csv(os.path.join(out_path,'scCSE4_601TA_H-SASA_MDavr.csv'))
+exit()
