@@ -1142,7 +1142,7 @@ def plot_prof_on_seq(data_file,DNAseq,prof_names=None,\
 	
 	#Open font from package in a tricky way, independent of package installation mode
 	temp2 = tempfile.TemporaryFile()
-	fontfile = pkgutil.get_data('HYDROID', 'pkgdata/cnrb.otf')
+	fontfile = pkgutil.get_data('hydroid', 'pkgdata/cnrb.otf')
 	temp2.write(fontfile)
 	temp2.seek(0)
 	font = ImageFont.truetype(temp2, 40)
