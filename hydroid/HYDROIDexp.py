@@ -369,7 +369,7 @@ def call_peaks_interactive(lane_profile_file,lane_config_file,DNAseq=None,labele
 	helper_params_changed=set()
 	for l in helper_prof_names:
 		helper_lanes[l]=read_profile(lane_profile_file,lane_config_file,l)
-		helper_lanes_orig_array[l]=helper_lanes[l][~np.isnan(lane)].values
+		helper_lanes_orig_array[l]=helper_lanes[l][~np.isnan(helper_lanes[l])].values
 		helper_params[l]=guess_missing_params(read_prof_configs(lane_config_file,l),len(helper_lanes_orig_array[l]))
 		if(normalize_profiles):
 			helper_lanes[l]=helper_lanes[l]/max(helper_lanes[l])*max(lane)
