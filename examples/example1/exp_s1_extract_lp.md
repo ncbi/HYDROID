@@ -17,6 +17,6 @@ Taking in mind the points outlined above the suggested way of streamlining the p
 4. Press Add [t] in ROI Manager to save the line. Repeat point 2 and 3 for each lane. Try to start and stop each line at the equivalent positions, so there length is approximately the same (see Figure above).
 5. Estimate the lane width and set the width of all selected lines to half of that (ROI Manager: Properties ...)
 6. Select all the saved lines in ROI Manager, Choose More->Multi Plot. The segmented lines would be straighten automatically, check if they still follow lane paths.
-7. In the plot window click Save ... and save the file. The file will have data columns corresponding to each profiles (X and Y values columns for each profiles). This file will be imported further by HYDROIDexp routines.
+7. In the plot window click Save ... and save the XLS file. The file will have data columns corresponding to each profiles (X and Y values columns for each profiles). This file will be imported further by HYDROIDexp routines. Depending on the version of ImageJ the default file extension may be different. Always specify ‘xls’ as the file extension in order for the data to be saved in the correct format.
 
 An example of a file produced by ImageJ used for further analysis can be found [here](data/lane_profiles.xls). The columns of data represent values along the lanes from top of the gel to the bottom.
