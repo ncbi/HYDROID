@@ -20,8 +20,8 @@ The default electron cloud distances of ~0.97A for X-H bonds in sugars are used.
 
 # Analysis of the results
 - [H-SASA_params_analyze.py](H-SASA_params_analyze.py) and [H-SASA_params_analyze_vs_Exp.py] were used to generate interactive plots:
-    - [nucl_H-SASA.html](https://ncbi.github.io/HYDROID/example1/results/nucl_H-SASA.html) shows top and bottom strand H-SASA profiles depending on various paramters.
-    - [nucl_H-SASAvsEXP_TS.html](https://ncbi.github.io/HYDROID/example1/results/nucl_H-SASAvsEXP_TS.html) and [nucl_H-SASAvsEXP_BS.html](https://ncbi.github.io/HYDROID/example1/results/nucl_H-SASAvsEXP_BS.html) show comparison of experimetnal profiles to H-SASA profiles generated with different parameters.
+    - [nucl_H-SASA.html](https://ncbi.github.io/HYDROID/examples/example1/results/nucl_H-SASA.html) shows top and bottom strand H-SASA profiles depending on various paramters.
+    - [nucl_H-SASAvsEXP_TS.html](https://ncbi.github.io/HYDROID/examples/example1/results/nucl_H-SASAvsEXP_TS.html) and [nucl_H-SASAvsEXP_BS.html](https://ncbi.github.io/HYDROID/examples/example1/results/nucl_H-SASAvsEXP_BS.html) show comparison of experimetnal profiles to H-SASA profiles generated with different parameters.
 
 
 
