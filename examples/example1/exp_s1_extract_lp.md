@@ -10,7 +10,7 @@ The first step is to convert 2D image into 1D lane profiles for every lane. This
 - Since the PAGE gel image data is often noisy, the 1 pixel width profile will be often very noise too. Averaging it along the width of the lane is recommended. The width of averaging is recommended to be set to 25-50% of the lane width depending on the quality and shape of the bands. In ImageJ this can be easily done by setting the line width to the corresponding value (Image->Adjust->Line width ...).
 - The background noise intensity should be subtracted from the data if needed.
 
-Taking in mind the points outlined above the suggested way of streamlining the process for extracting multiple lane profiles simultaneously through ImageJ is following:
+Taking into account the points outlined above, the suggested way of streamlining the process for extracting multiple lane profiles simultaneously through ImageJ is the following:
 
 1. Subtract image background if necessary (Process-> Subtract background ...) or (Process-> Math -> Subtract...). Note: If substantial contribution from the background is present, subtracting it is important for correct quantification.
 3. Press Segmented Line (or Straight Line) button, Draw a line along the center of one lane from the top of the gel to the bottom(!).
