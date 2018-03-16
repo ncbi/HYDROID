@@ -40,6 +40,7 @@ prof_data=[
 #Common code:
 #will calculate H-SASA profiles from PDB structure with hydrogen atoms.
 #adjust n_threads to the number of CPU cores in your computer for optimal performance
+#NOTE: on Windows choolse n_threads=1, since it does not support execution in parallel
 ###################################
 for p in prof_data:
 	get_DNA_H_SASA(os.path.join(str_path,p['pdb_file']),os.path.join(out_path,p['prof_name']+'_H-SASA.csv'),\
