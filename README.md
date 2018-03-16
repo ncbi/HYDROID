@@ -18,6 +18,9 @@ Video tutorial is [available here](https://www.youtube.com/playlist?list=PL_GHGd
 
 ## Quick-start guide
 
+NOTE: HYDROID is a full featured Python-script driven software solution that requires basic familiarity with Python-scripting. 
+[HYROID_GUI](https://github.com/intbio/HYDROID_GUI) is a sister package that wraps some basic gel lane quantification functionality into a more user friendly graphical interface.  
+
 ### Quick installation
 Install Miniconda with Python2.7 for your platform from [https://conda.io/miniconda.html](https://conda.io/miniconda.html).
 
