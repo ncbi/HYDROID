@@ -41,6 +41,8 @@ prof_data=[
 #will calculate H-SASA profiles from PDB structure with hydrogen atoms.
 #adjust n_threads to the number of CPU cores in your computer for optimal performance
 #NOTE: on Windows choose n_threads=1, since it does not support execution in parallel
+#Hcontrib - coefficients for individual SASA of deoxyribose hydrogens for summing them up into H-SASA profile, order [H1' H2' H2'' H3' H4' H5' H5'']
+#Hcontrib=[0.0,0.0,0.0,0.0,1.0,1.0,1.0] - gives best results for X-ray structures without MD optimization.
 ###################################
 for p in prof_data:
 	get_DNA_H_SASA(os.path.join(str_path,p['pdb_file']),os.path.join(out_path,p['prof_name']+'_H-SASA.csv'),\
