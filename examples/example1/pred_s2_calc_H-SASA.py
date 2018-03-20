@@ -47,5 +47,5 @@ prof_data=[
 for p in prof_data:
 	get_DNA_H_SASA(os.path.join(str_path,p['pdb_file']),os.path.join(out_path,p['prof_name']+'_H-SASA.csv'),\
 		chain=p['chain'],resids=p['resids'],seq=p['seq'],probe_radius=1.4,slicen=200,vdw_set=p['vdw_set'],\
-		Hcontrib=[1.0]*7,n_threads=1,verbose=False)
+		Hcontrib=[0.0,0.0,0.0,0.0,1.0,1.0,1.0],n_threads=1,verbose=False)
 
