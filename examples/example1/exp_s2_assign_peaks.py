@@ -50,3 +50,27 @@ for LN in lane_names:
 
 
 
+
+############################################
+#
+# Below we provide a sample alternative script that will launch all windows at once 
+# through multiprocessing library.
+#
+
+#from multiprocessing import Process
+#from hydroid.HYDROIDexp import assign_peaks_interactive
+#import time
+
+#def main():
+#    processes=[]
+#    profile_file="data/lane_profiles.xls"
+#    config_file ="data/lane_config.csv"
+#    for LN in ['scCSE4_601TA_BS','GA_601TA_BS','CT_601TA_BS','scCSE4_601TA_TS','GA_601TA_TS','CT_601TA_TS']:
+#        processes.append(Process(target=assign_peaks_interactive,
+#                                 args=(profile_file,config_file,LN)))
+#        processes[-1].daemon = True
+#        processes[-1].start()
+#    raw_input("Press Enter to terminate processes")
+#    
+#if __name__ == '__main__':
+#    main()    
