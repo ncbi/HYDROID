@@ -54,8 +54,8 @@ for LN in lane_names:
 ############################################
 #
 # Below we provide a sample alternative script that will launch all windows at once 
-# through multiprocessing library.
-#
+# through multiprocessing library on Linux and Windows.
+############################################
 
 #from multiprocessing import Process
 #from hydroid.HYDROIDexp import assign_peaks_interactive
