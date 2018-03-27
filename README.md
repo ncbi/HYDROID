@@ -21,7 +21,7 @@ HYDROID video tutorial is [available here](https://www.youtube.com/playlist?list
 
 NOTE: HYDROID is a full featured Python-script driven software solution that requires basic familiarity with Python-scripting. 
 
-[HYROID_GUI](https://github.com/intbio/HYDROID_GUI) is a sister package that wraps some basic gel lane quantification functionality into a more user friendly graphical interface. [HYDROID_GUI](https://github.com/intbio/HYDROID_GUI) video tutorial is [available here](https://youtu.be/7UCb0IkXL2g).
+[HYROID_GUI](https://github.com/intbio/HYDROID_GUI) is a sister package that wraps some basic gel lane quantification functionality into a more user friendly graphical interface. [HYDROID_GUI](https://github.com/intbio/HYDROID_GUI) video tutorial is [available here](https://youtu.be/yQGMtqKzzbA).
 
 
 ### Quick installation
