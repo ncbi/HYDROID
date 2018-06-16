@@ -30,6 +30,8 @@ lane_data=[
 	{'file':'scCSE4_601TA_BS_fitted_intensities.csv','seq':BS_seq,'pngfileout':'scCSE4_601TA_BS_cl_freq_profile.png','title':'scCSE4_601TA, Bottom Strand, Cleavage frequency profile along DNA'},
 	]
 
+
+
 #Common code:
 # will iterate through the lanes and plot the profile values along DNA sequence
 # For interactive exploration of the plot set graphshow=True

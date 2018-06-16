@@ -18,6 +18,7 @@ any saved records will be written at the end of the file and override any previo
 
 """
 
+
 from Bio import SeqIO
 
 import sys

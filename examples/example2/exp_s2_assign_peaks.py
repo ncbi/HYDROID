@@ -27,9 +27,6 @@ will be used in the next step to align HRF and Maxam-Gilbert profiles for sequen
 It is advised to check data/lane_config.csv afterwards,
 any saved parameter records will be written at the end of the file and override any previous records.
 
-
-
-
 """
 import sys
 
