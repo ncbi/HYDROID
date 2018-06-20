@@ -3,7 +3,7 @@
 HYDROID (HYDroxyl-Radical fOotprinting Interpretation for DNA)
 Example 2, chicken nucleosomes reconstituted on a well-positioning sequence, Morozov et al. NAR 2009
 
-Comparison step:
+Comparison stage:
 Comparing experimental profiles from different gel lanes
 as well as similarity between top and bottom strand profiles due
 to pseudosymmetry of nucleosome

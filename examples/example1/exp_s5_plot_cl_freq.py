@@ -3,7 +3,7 @@
 HYDROID (HYDroxyl-Radical fOotprinting Interpretation for DNA)
 Example 1, centromeric nucleosome of yeast reconstituted on a well-positioning sequence, Shaytan et al. 2017
 
-HYDROIDexp, Step 5:
+HYDROIDexp, Stage 5:
 Plotting the extracted DNA cleavage frequencies along the seqeunce in a graphically compelling way.
 
 """

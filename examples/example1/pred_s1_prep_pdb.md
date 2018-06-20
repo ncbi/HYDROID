@@ -1,4 +1,4 @@
-# Step 1: Preparing a PDB file with hydrogen atoms
+# Stage 1: Preparing a PDB file with hydrogen atoms
 
 For this example we use a PDB file of a homology model of nucleosome, which corresponds to the one analyzed experimentally, ([scCSE4_601TA_nucl.pdb](data/structures/scCSE4_601TA_nucl.pdb)). The model was build based on an experimental X-ray template (PDBid [3LZ0](http://www.rcsb.org/pdb/explore.do?structureId=3lz0)).
 

@@ -3,7 +3,7 @@
 HYDROID (HYDroxyl-Radical fOotprinting Interpretation for DNA)
 Example 1, centromeric nucleosome of yeast reconstituted on a well-positioning sequence, Shaytan et al. 2017
 
-Comparison step:
+Comparison stage:
 Comparing experimental profiles between top and bottom strand profiles due
 to pseudosymmetry of nucleosome
 

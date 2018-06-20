@@ -3,12 +3,12 @@
 HYDROID (HYDroxyl-Radical fOotprinting Interpretation for DNA)
 Example 2, chicken nucleosomes reconstituted on a well-positioning sequence, Morozov et al. NAR 2009
 
-HYDROIDexp, Step 3:
+HYDROIDexp, Stage 3:
 Calling peaks (assigning DNA sequence positions to individual peaks)
 
 Peak calling is usually accomplished by comparing footprinting lanes to sequencing lanes or other data.
 
-In this step the user is allowed to compare PCR profiles with dideoxynucleotide triphosphates
+In this stage the user is allowed to compare PCR profiles with dideoxynucleotide triphosphates
 and HRF profiles on same plots
 and to interactively specify the location of any band peak on the DNA sequence.
 Sequence calling for all other peaks will be done automatically.

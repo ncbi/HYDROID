@@ -3,7 +3,7 @@
 HYDROID (HYDroxyl-Radical fOotprinting Interpretation for DNA)
 Example 1, centromeric nucleosome of yeast reconstituted on a well-positioning sequence, Shaytan et al. 2017
 
-HYDROIDexp, Step 2:
+HYDROIDexp, Stage 2:
 assigning initial peaks positions to gel band peaks on 1-D lane profiles
 
 The automatic peak identification algorithm is guided by parameters set in data/lane_config.csv
@@ -17,12 +17,12 @@ these paramters and saving them back to file (press Save button).
 Positions of the band peaks identified by the semi-automatic algorithm are maked by asterisks and change interactively
 upon adjustments of the algorithm paramters in the GUI window.
 
-As a result of this step it is important to make sure that every peak in the region of interest of
+As a result of this stage it is important to make sure that every peak in the region of interest of
 HRF lane profiles (specified by leftlim an rightlim paramters) is maked by exactly one asterisk.
 
 For the Maxam-Gilbert lanes exact identification of peaks is not important,
-however, this step helps to set the alignpos parameter - a characteristic position on a profile that
-will be used in the next step to align HRF and Maxam-Gilbert profiles for sequence calling.
+however, this stage helps to set the alignpos parameter - a characteristic position on a profile that
+will be used in the next stage to align HRF and Maxam-Gilbert profiles for sequence calling.
 
 It is advised to check data/lane_config.csv afterwards,
 any saved parameter records will be written at the end of the file and override any previous records.

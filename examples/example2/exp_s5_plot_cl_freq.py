@@ -3,7 +3,7 @@
 HYDROID (HYDroxyl-Radical fOotprinting Interpretation for DNA)
 Example 2, chicken nucleosomes reconstituted on a well-positioning sequence, Morozov et al. NAR 2009
 
-HYDROIDexp, Step 5:
+HYDROIDexp, Stage 5:
 Plotting the extracted DNA cleavage frequencies along the seqeunce in a graphically compelling way.
 
 """

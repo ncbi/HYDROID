@@ -3,7 +3,7 @@
 HYDROID (HYDroxyl-Radical fOotprinting Interpretation for DNA)
 Example 1, centromeric nucleosome of yeast reconstituted on a well-positioning sequence, Shaytan et al. 2017
 
-HYDROIDpred, Step 2:
+HYDROIDpred, Stage 2:
 Calculating H-SASA profiles (deoxyribose hydrogen atoms solvent accessible surface area)
 from a strucutre of a protein DNA complex.
 FreeSASA software is used to perform the calculation of

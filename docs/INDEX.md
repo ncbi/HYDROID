@@ -14,19 +14,19 @@ This package provides two Python modules implementing complementary functionalit
 * [HYDROIDexp](../hydroid/HYDROIDexp.py) - extraction and quantification of DNA cleavage frequency profiles from gel electrophoresis images.
 * [HYDROIDpred](../hydroid/HYDROIDpred.py) - estimation of theoretical DNA cleavage frequency profiles from PDB structures through estimating deoxyribose hydrogen atoms solvent accessibility (H-SASA).
 
-Every step is implemented as a Python functions that can be launched from a Python script.
+Every stage is implemented as a Python functions that can be launched from a Python script.
 Several function provide GUI interfaces for interactive data adjustment and analysis.
 
 The overall workflow is oulined in the figure below.
-- HYDROIDexp, Step 1: A PAGE image with HRF lanes and sequencing lanes is digitized into a data file using ImageJ.
-- HYDROIDexp, Step 2: `assign_peaks_interactive` function is used to interactively map the position of the bands on the profile.
-- HYDROIDexp, Step 3: `call_peaks_interactive` function is used to interactively compare HRF profiles with DNA sequencing reaction profile to map the position of the peaks to the DNA sequence.
-- HYDROIDexp, Step 4: `fit_peaks` function is used to deconvolute HRF profiles into contributions of individual bands by using Gaussian or Lorentzian models for the intensity of every band on the gel.
-- HYDROIDexp, Step 5: `plot_prof_on_seq` function is used to produce plots of cleavage frequency profile along DNA sequence.
+- HYDROIDexp, Stage 1: A PAGE image with HRF lanes and sequencing lanes is digitized into a data file using ImageJ.
+- HYDROIDexp, Stage 2: `assign_peaks_interactive` function is used to interactively map the position of the bands on the profile.
+- HYDROIDexp, Stage 3: `call_peaks_interactive` function is used to interactively compare HRF profiles with DNA sequencing reaction profile to map the position of the peaks to the DNA sequence.
+- HYDROIDexp, Stage 4: `fit_peaks` function is used to deconvolute HRF profiles into contributions of individual bands by using Gaussian or Lorentzian models for the intensity of every band on the gel.
+- HYDROIDexp, Stage 5: `plot_prof_on_seq` function is used to produce plots of cleavage frequency profile along DNA sequence.
 
-- HYDROIDpred, Step 1: A structure of DNA-protein complex is prepared in PDB-format with hydrogen atoms in place.
-- HYDROIDpred, Step 2: `get_DNA_H_SASA` function is used to calculate theoretical cleavage frequency profiles from PDB structures.
-- HYDROIDpred, Step 3: `plot_prof_on_seq` function is used to produce plots of theoretical cleavage frequency profile along DNA sequence.
+- HYDROIDpred, Stage 1: A structure of DNA-protein complex is prepared in PDB-format with hydrogen atoms in place.
+- HYDROIDpred, Stage 2: `get_DNA_H_SASA` function is used to calculate theoretical cleavage frequency profiles from PDB structures.
+- HYDROIDpred, Stage 3: `plot_prof_on_seq` function is used to produce plots of theoretical cleavage frequency profile along DNA sequence.
 
 Finally, experimental and theoretical cleavage frequency profiles are compared to validate/invalidate/refine the model and/or interpret experimental data. 
 
@@ -43,7 +43,7 @@ Finally, experimental and theoretical cleavage frequency profiles are compared t
 
 ## Documentation
 
-The esiest way to get familiar with HYDROID is to follow one of the well documented step-by-step [examples](../examples) and modify them as needed for the user data:
+The esiest way to get familiar with HYDROID is to follow one of the well documented stage-by-stage [examples](../examples) and modify them as needed for the user data:
 
 * [Example 1](../examples/example1): Quantifying HRF of a centromeric nucleosome with DNA radioactively labeled at 3' end. Predicting cleavage frequency profiles from an atomistic structure model and comparing to experimental ones.
 * [Example 2](../examples/example2): Quantifying HRF of a nucleosome with DNA radioactively labeled at 5' end. Highlights conversion of gel images to data profiles via ImageJ.
@@ -56,7 +56,7 @@ HYDROID_get_ex2 # download Example 2 to the current directory
 
 Video tutorial is available [here](https://www.youtube.com/playlist?list=PL_GHGdsPyn0nVSvrRnyvuvkRCrNBjqeuC).
 
-DocString documentation for every function is provided inside the modules as well as step-by-step example Python files.
+DocString documentation for every function is provided inside the modules as well as stage-by-stage example Python files.
 
 Detailed information about HYDROID algorithms can be found in the accompanying publication: A.K. Shaytan et al. (in preparation)
 

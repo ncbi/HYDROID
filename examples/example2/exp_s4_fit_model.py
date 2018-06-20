@@ -3,10 +3,10 @@
 HYDROID (HYDroxyl-Radical fOotprinting Interpretation for DNA)
 Example 2, chicken nucleosomes reconstituted on a well-positioning sequence, Morozov et al. NAR 2009
 
-HYDROIDexp, Step 4:
+HYDROIDexp, Stage 4:
 Fitting a model based on a sum of Gaussian/Lorentzian functions representing each band peak.
 
-In this step a model will be fit to the original HRF profile curve,
+In this stage a model will be fit to the original HRF profile curve,
 this allows to extract unbaised DNA cleavage intensities for every DNA position.
 
 """
