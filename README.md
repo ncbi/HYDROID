@@ -53,9 +53,6 @@ python exp_s2_assign_peaks.py
 See full examples set and instructions in [examples folder](examples).
 
 ## Citing HYDROID
-Please cite HYDROID using following publications:
-- A.K. Shaytan et al. (in preparation)
-
-
-
+Please cite HYDROID using following publication:
+- A.K. Shaytan, H. Xiao, G.A. Armeev, D.A. Gaykalova, G.A. Komarova, C. Wu, V.M. Studitsky, D. Landsman, A.R. Panchenko "Structural interpretation of DNA–protein hydroxyl-radical footprinting experiments with high resolution using HYDROID", <b>Nature Protocols</b>, 2018, DOI: [10.1038/s41596-018-0048-z](https://www.nature.com/articles/s41596-018-0048-z)
 
