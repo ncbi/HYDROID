@@ -65,7 +65,7 @@ setup(
         'numpy>=1.11.0',
         'pandas>=0.19.2',
         'PeakUtils>=1.0.3',
-        'Pillow==4.0.0',
+        'Pillow==6.2.0',
         'scipy==0.18.1',
         'statsmodels==0.8.0',
     ],
