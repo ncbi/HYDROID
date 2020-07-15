@@ -27,6 +27,8 @@ NOTE: HYDROID is a full featured Python-script driven software solution that req
 ### Quick installation
 Install Miniconda with Python2.7 for your platform from [https://conda.io/miniconda.html](https://conda.io/miniconda.html).
 
+NB: As of 2020 only the legacy version 4.3.31 of the Miniconda installer works that can be downloaded from  [https://repo.anaconda.com/miniconda/](https://repo.anaconda.com/miniconda/)
+
 ```
 conda install -c hydroid hydroid
 ```
